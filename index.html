@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Alva Sandoval | CTO & Senior Software Engineer</title>
+    <meta name="description"
+        content="Perfil profesional de Carlos Alva Sandoval, CTO at TKambio y Remote Senior Software Engineer. Especialista en automatización, liderazgo y metodologías ágiles.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-animation"></div>
+
+    <main class="card-container">
+        <div class="lang-switcher">
+            <button id="lang-btn" class="btn-lang" onclick="toggleLanguage()">
+                <i class="fas fa-globe"></i> <span id="lang-label">ES</span>
+            </button>
+        </div>
+
+        <section class="card">
+            <div class="profile-image-container">
+                <img src="profile_v2.png" alt="Carlos Alva Sandoval" class="profile-image">
+                <div class="status-indicator"></div>
+            </div>
+
+            <header class="header">
+                <h1>Carlos Alva Sandoval</h1>
+                <p class="tagline" id="ux-tagline">CTO at TKambio & Senior Software Engineer</p>
+            </header>
+
+            <div class="description">
+                <p id="ux-description">I lead technology and product strategies. Specialist in implementing AI solutions
+                    for business and web software development.</p>
+            </div>
+
+            <div class="actions">
+                <a href="https://www.linkedin.com/in/carlosalva/" target="_blank" class="btn btn-primary"
+                    id="linkedin-btn">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="mailto:carlos.alva.sandoval@gmail.com" class="btn btn-secondary" id="email-btn">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="carlos_alva.vcf" download="Carlos_Alva_Sandoval.vcf" class="btn btn-contact" id="contact-btn">
+                    <i class="fas fa-user-plus"></i> <span id="ux-contact">Save Contact</span>
+                </a>
+            </div>
+
+            <footer class="footer">
+                <p>Digital Business Card &copy; 2026</p>
+            </footer>
+        </section>
+    </main>
+
+    <script>
+        const translations = {
+            en: {
+                tagline: "CTO at TKambio & Senior Software Engineer",
+                description: "I lead technology and product strategies. Specialist in implementing AI solutions for business and web software development.",
+                contact: "Save Contact",
+                langLabel: "ES"
+            },
+            es: {
+                tagline: "CTO en TKambio & Senior Software Engineer",
+                description: "Lidero estrategias tecnológicas y de producto. Especialista en implementación de soluciones de IA para negocios y desarrollo de software web.",
+                contact: "Guardar Contacto",
+                langLabel: "EN"
+            }
+        };
+
+        let currentLang = 'en';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'es' : 'en';
+            const t = translations[currentLang];
+
+            document.getElementById('ux-tagline').textContent = t.tagline;
+            document.getElementById('ux-description').textContent = t.description;
+            document.getElementById('ux-contact').textContent = t.contact;
+            document.getElementById('lang-label').textContent = t.langLabel;
+
+            // Re-translate for screen readers
+            document.documentElement.lang = currentLang;
+        }
+    </script>
+</body>
+
+</html>
