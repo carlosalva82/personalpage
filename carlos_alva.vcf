@@ -1,9 +1,11 @@
 BEGIN:VCARD
 VERSION:3.0
+N:Sandoval;Carlos;Alva;;
 FN:Carlos Alva Sandoval
-TEL;TYPE=CELL:9804282356
-EMAIL;TYPE=INTERNET:carlos.alva.sandoval@gmail.com
-URL:https://www.linkedin.com/in/carlosalva/
-TITLE:Carlos Alva Sandoval
+TITLE:CTO & IT Specialist
 ORG:Personal
+EMAIL;TYPE=INTERNET,WORK:carlos.alva.sandoval@gmail.com
+TEL;TYPE=CELL,VOICE:+19804282356
+URL:https://www.linkedin.com/in/carlosalva/
+REV:2026-01-14T14:50:00Z
 END:VCARD
